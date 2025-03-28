@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zxx">
+{% load static %}
+
+<head>
+	<title>register</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords"
+		content="Tasty Burger Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
+
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta tag Keywords -->
+
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="{%static 'css/bootstrap.css' %}">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="{%static 'css/style.css' %}" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="{%static 'css/font-awesome.min.css' %}" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+
+	<!-- Web-Fonts -->
+	<link
+		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+		rel="stylesheet">
+	<link
+		href="//fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+	<!-- //Web-Fonts -->
+</head>
+
+<body>
+	<!-- header -->
+	<header id="index">
+		<!-- top-bar -->
+
+		<div class="top-bar py-2 border-bottom">
+			<div class="container">
+				<div class="row middle-flex">
+					<div class="col-xl-7 col-md-5 top-social-agile mb-md-0 mb-1 text-lg-left text-center">
+						<div class="row">
+							<div class="col-xl-3 col-6 header-top_w3layouts">
+								<p class="text-da">
+									<span class="fa fa-map-marker mr-2"></span>Cochin, Kerala
+								</p>
+							</div>
+							<div class="col-xl-3 col-6 header-top_w3layouts">
+								<p class="text-da">
+									<span class="fa fa-phone mr-2"></span>+91 9961946383
+								</p>
+							</div>
+							<div class="col-xl-6"></div>
+						</div>
+					</div>
+					<div class="col-xl-5 col-md-7 top-social-agile text-md-right text-center pr-sm-0 mt-md-0 mt-2">
+						<div class="row middle-flex">
+							<div class="col-lg-12 col-4 top-w3layouts p-md-0 text-right">
+								<!-- login -->
+								<a href="login" class="btn login-button-2 text-uppercase text-wh">
+									<span class="fa fa-sign-in mr-2"></span>Login</a>
+								<!-- //login -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<!-- //top-bar -->
+
+	<!-- header 2 -->
+	<!-- navigation -->
+	<div class="main-top py-1">
+		<div class="container">
+			<div class="nav-content">
+				<!-- logo -->
+				<h1>
+					<a id="logo" class="logo" href="index">
+						<img src="{%static 'images/logo.png' %}" height="20px" width="30px" alt="#" class="img-fluid">
+					</a>
+				</h1>
+				<!-- //logo -->
+				<!-- nav -->
+				<div class="nav_web-dealingsls">
+					<nav>
+						<label for="drop" class="toggle">Categories</label>
+						<input type="checkbox" id="drop" />
+						<ul class="menu">
+							<li><a href="index">Home</a></li>
+							<li><a href="about">About Us</a></li>
+<!--							<li>-->
+<!--								&lt;!&ndash; First Tier Drop Down &ndash;&gt;-->
+<!--								<label for="drop-3" class="toggle toogle-2">Extra Features <span class="fa fa-angle-down"-->
+<!--										aria-hidden="true"></span>-->
+<!--								</label>-->
+<!--								<a href="#pages">Extra Features <span class="fa fa-angle-down" aria-hidden="true"></span></a>-->
+<!--								<input type="checkbox" id="drop-3" />-->
+<!--								<ul>-->
+<!--&lt;!&ndash;									<li><a class="drop-text" href="offers">Special Offers</a></li>&ndash;&gt;-->
+<!--									<li><a class="drop-text" href="login">Login</a></li>-->
+<!--									<li><a class="drop-text" href="register">Register</a></li>-->
+<!--								</ul>-->
+<!--							</li>-->
+<!--							<li><a href="category">Categories</a></li>-->
+<!--							<li><a href="contact">Contact Us</a></li>-->
+						</ul>
+					</nav>
+				</div>
+				<!-- //nav -->
+			</div>
+		</div>
+	</div>
+	<!-- //navigation -->
+	<!-- //header 2 -->
+
+	<!-- banner -->
+	<div class="main-banner-2">
+		<img src="{%static 'images/pc.png' %}" height="700px" width="1500px">
+	</div>
+	<!-- //banner -->
+	<!-- page details -->
+	<div class="breadcrumb-agile bg-light py-2">
+		<ol class="breadcrumb bg-light m-0">
+			<li class="breadcrumb-item">
+				<a href="index">Home</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">Register Page</li>
+			<li class="breadcrumb-item">
+				<a href="login">Login Here</a>
+			</li>
+		</ol>
+	</div>
+	<!-- //page details -->
+
+<!-- message -->
+	{% if messages %}
+	<div class="container">
+		<div class="alert alert-success alert-dismissible messages">
+			{% for message in messages %}
+				<button type="button" class="close" data-dismiss="alert">🞭</button>
+			 {{message}}
+	  	</div>
+		 {% endfor %}
+	</div>
+	{% endif %}
+<!-- //message -->
+
+	<!-- user register -->
+	<div class="login-contect py-5">
+		<div class="container py-xl-5 py-3">
+			<div class="login-body">
+				<div class="login p-4 mx-auto">
+					<h2 class="text-center mb-4"><u>Register Now</u></h2>
+					<form action="register" method="post" enctype="multipart/form-data">
+						{% csrf_token %}
+						<div class="form-group">
+							<label>Your Name<span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="name" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label>Email<span class="text-danger">*</span></label>
+							<input type="email" class="form-control" name="email" pattern="^[a-z0-9]+@[a-z]+\.[a-z]{3}$" title="Enter valid E-mail" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label>Image<span class="text-danger">*</span></label>
+							<input type="file" class="form-control" name="user_img" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label>Phone Number<span class="text-danger">*</span></label>
+							<input type="number" class="form-control" name="nmbr" pattern="^[6-9]\d{9}$" title="Must contain 10 numbers" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label>Address<span class="text-danger">*</span></label>
+							<textarea class="form-control" name="adrss" placeholder="" required></textarea>
+						</div>
+						<div class="form-group">
+							<label>District<span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="udistrict" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label>City<span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="ucity" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label>Pincode<span class="text-danger">*</span></label>
+							<input type="number" class="form-control" name="upincode" pattern="^\d{6}$" title="Enter Valid Pincode" placeholder="" required>
+						</div>
+						<div class="form-group">
+							<label class="mb-2">User Name<span class="text-danger">*</span></label>
+							<input type="text" class="form-control" name="usname" id="username1" placeholder="" required=>
+						</div>
+						<div class="form-group">
+							<label class="mb-2">Password<span class="text-danger">*</span></label>
+							<input type="password" class="form-control" name="password" id="password1"   placeholder="" required>
+						</div>
+						<button type="submit" class="btn submit mb-4">Register</button>
+						<p class="text-center">
+							<a href="login" class="text-da">By clicking Register, I agree to your terms</a>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //user register -->
+
+
+	<!-- footer -->
+	<footer class="py-5">
+		<div class="container py-xl-4">
+			<div class="row footer-top">
+				<div class="col-lg-4 footer-grid_section_1its footer-text">
+					<!-- logo -->
+					<h2>
+						<a class="logo text-wh" href="">
+							<img src="{%static 'images/logo.png' %}" height="200px" width="100px" alt="logo" class="img-fluid"><span></span>
+						</a>
+					</h2>
+					<!-- //logo -->
+					<p class="mt-lg-4 mt-3 mb-lg-5 mb-4">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+						The point of using Lorem.</p>
+					<!-- social icons -->
+				</div>
+				<div class="col-lg-4 footer-grid_section_1its my-lg-0 my-sm-4 my-4">
+					<div class="footer-title">
+						<h3>Contact Us</h3>
+					</div>
+					<div class="footer-text mt-4">
+						<p>Address : NS Building, Kadavanthra, Cochin, Eranakulam, Kerala</p>
+						<p class="my-2">call : +91 9961946383</p>
+						<p>Email : <a href="mailto:healetshop@gmail.com">healetshop@gmail.com</a></p>
+					</div>
+					<div class="footer-title mt-4 pt-md-2">
+						<h3>Payment Method</h3>
+					</div>
+					<ul class="list-unstyled payment-links mt-4">
+						<li>
+							<a href="login"><img src="{%static 'images/cod.jpg' %}" alt="py1" height="25px" width="100px"></a>
+						</li>
+						<li>
+							<a href="login."><img src="{%static 'images/razorpay.jpg' %}" alt="py2" height="25px"></a>
+						</li>
+
+					</ul>
+				</div>
+				<div class="col-lg-4 footer-grid_section_1its">
+					<div class="footer-title">
+						<h3>Services</h3>
+					</div>
+					<div class="footer-text mt-4">
+						<p>Free Shipping</p>
+						<p>24/7 Support</p>
+						<p>Cash On Delivery & Online Payment Available</p>
+						<p>No Return/Refund Policies</p>
+						<p>Quality Assurance</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+
+
+</body>
+
+</html>
